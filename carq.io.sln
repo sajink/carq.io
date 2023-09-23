@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31423.177
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carq.Web", "Carq.Web\Carq.Web.csproj", "{22A46EE0-2ECD-48C0-B2C3-23B457113196}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carq.Service", "Carq.Service\Carq.Service.csproj", "{63A482CF-EA9A-4D04-B515-96509D7AB952}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22A46EE0-2ECD-48C0-B2C3-23B457113196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A46EE0-2ECD-48C0-B2C3-23B457113196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A46EE0-2ECD-48C0-B2C3-23B457113196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A46EE0-2ECD-48C0-B2C3-23B457113196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A482CF-EA9A-4D04-B515-96509D7AB952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A482CF-EA9A-4D04-B515-96509D7AB952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A482CF-EA9A-4D04-B515-96509D7AB952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A482CF-EA9A-4D04-B515-96509D7AB952}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BE47067-FBA6-403D-B79A-84858D4BD6D1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,69 @@
+﻿<div class="min-h-screen py-6 relative" id="app">
+    <img src="logo.png" class="w-24 h-auto mr-6 absolute top-0 right-0" />
+    <div class="container mx-auto px-4 mt-8">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
+                <div class="w-full max-w-xs bg-white flex flex-col py-5 px-8 rounded-lg shadow-lg mx-auto bg-yellow-200">
+                    <label class="text-gray-700 font-bold py-2" for="">Registration #</label>
+                    <input class="text-gray-700 text-2xl border rounded-md border-yellow-100 bg-yellow-100 mb-3 py-1 px-3" type="text" placeholder="KA-03-ZA-1234" v-model="regn" :onkeyup="regnUpd">
+                    <div class="flex justify-between items-center my-4 ml-auto">
+                        <button class="bg-yellow-600 hover:bg-yellow-700 text-yellow-100 font-bold rounded py-2 px-4" :onclick="fetchReport">
+                            Fetch Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="w-full">
+            <table class="w-full text-sm text-left text-gray-500" v-if="rto">
+                <thead class="text-xs text-gray-700 uppercase bg-yellow-400">
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-yellow-200 border-b" v-for="(value, name, index) in rto">
+                        <td>{{name}}</td>
+                        <td>{{value}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <table class="w-full text-sm text-left text-gray-500" v-if="service">
+                <thead class="text-xs text-gray-700 uppercase bg-yellow-400">
+                    <tr>
+                        <th>Date</th>
+                        <th>Parts Amt</th>
+                        <th>Labor Amt</th>
+                        <th>Dealer</th>
+                        <th>Mileage</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-yellow-200 border-b" v-for="item in service">
+                        <td>{{item.svcDate}}</td>
+                        <td>{{item.PART_AMT}}</td>
+                        <td>{{item.LABOUR_AMT}}</td>
+                        <td>{{item.dlrName}}</td>
+                        <td>{{item.mileage}}</td>
+                        <td>{{item.workType}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Script{
+    <script>
+        var app = Vue.createApp(carModel);
+        var vm = app.mount("#app");
+    </script>
+}
